@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="images/rocket.png" />
+      <img src="images/todo.png" />
+    </header>
+
+    <!-- //Section part -->
+    <section class="middle-content">
+      <div class="section">
+        <div id="High" class="container">
+          <div class="firstDiv">
+            <div class="second-span">
+              <span style="color: #4ea8de; font-size: 14px">To Do</span>
+              <span class="number">0</span>
+            </div>
+            <div class="second-span">
+              <span style="color: #4ea8de; font-size: 14px">High priority</span>
+              <span class="number">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="Medium" class="container">
+          <div class="set-in-btw">
+            <div class="second-span">
+              <span style="color: #4ea8de; font-size: 14px">Started</span>
+              <span class="number">0</span>
+            </div>
+            <div class="second-span">
+              <span style="color: #4ea8de; font-size: 14px">High priority</span>
+              <span class="number">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="Low" class="container">
+          <div class="set-in-btw">
+            <div class="second-span">
+              <span style="color: #4ea8de; font-size: 14px">Completed</span>
+              <span class="number">10</span>
+            </div>
+            <div class="second-span">
+              <span style="color: #4ea8de; font-size: 14px">High priority</span>
+              <span class="number">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal hide-modal" id="modal">
+      <span class="material-icons toggle" onclick="toggleModal(this)">
+        expand_less
+      </span>
+      <form>
+        <input
+          type="text"
+          name="title"
+          placeholder="Task Title"
+          value="Chat App"
+          required
+        />
+
+        <textarea
+          name="description"
+          placeholder="Task Description"
+          cols="30"
+          rows="4"
+          required
+        ></textarea>
+        <input
+          type="date"
+          placeholder="Enter Name"
+          value="29-07-2000"
+          name="date"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Estimated time in days"
+          name="estimate"
+          value="3"
+        />
+        <select name="status" required>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <button style="background-color: #4ea8de">Create New Task</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="drag-drop.js"></script>
+  </body>
+</html>
